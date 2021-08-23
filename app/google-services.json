@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "104367977420",
+    "firebase_url": "https://obstacle-avoider-3cc29-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "obstacle-avoider-3cc29",
+    "storage_bucket": "obstacle-avoider-3cc29.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:104367977420:android:84c8cc7e5c3009f6872369",
+        "android_client_info": {
+          "package_name": "com.example.obstickleavoider"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "104367977420-cv2tg4krv9k9jii10ladpqodrgvoldsq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1l5kNJIA_n5SUPYt-_4DJa3kkhmp0qAY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "104367977420-cv2tg4krv9k9jii10ladpqodrgvoldsq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
