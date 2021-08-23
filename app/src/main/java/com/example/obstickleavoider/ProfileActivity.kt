@@ -26,8 +26,6 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
         logout = findViewById(R.id.signOut)
         logout.setOnClickListener(this)
 
-
-
         user = FirebaseAuth.getInstance().currentUser!!
         reference = FirebaseDatabase.getInstance().getReference("Users")
         userID = user.uid

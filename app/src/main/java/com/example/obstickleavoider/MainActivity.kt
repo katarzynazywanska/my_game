@@ -11,6 +11,7 @@ import android.widget.*
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import java.lang.Thread.sleep
 import java.net.MalformedURLException
 
 private lateinit var register : TextView
@@ -49,7 +50,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             (R.id.register) -> {
                 val intent = Intent(this, RegisterUser::class.java)
                 startActivity(intent)
-                finish()
             }
             (R.id.signIn) -> {
                 userLogin()
@@ -57,7 +57,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             (R.id.forgotPassword) -> {
                 val intent = Intent(this, ForgotPassword::class.java)
                 startActivity(intent)
-                finish()
             }
         }
     }
@@ -98,7 +97,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 val intent = Intent(this, ProfileActivity::class.java)
 
                 if(user?.isEmailVerified == true){
-                    
+
+                    Thread {
+                        run {
+                            sleep(3000)
+                            email.setText("")
+                            password.setText("")
+                        }
+                    }.start()
                     startActivity(intent)
                 } else {
                     user?.sendEmailVerification();

@@ -138,9 +138,9 @@ class GameplayScene : Scene {
                     ) {
                         movingPlayer = true
                     }
-                    if (gameOver && System.currentTimeMillis() - gameOverTime > 2000) {
-                        reset()
+                    if (gameOver && System.currentTimeMillis() - gameOverTime > 1000) {
                         gameOver = false
+                        reset()
                         orientationData.newGame()
                     }
                 }
@@ -155,8 +155,6 @@ class GameplayScene : Scene {
     override fun getObstacleManager(): ObstacleManager? {
         return obsManager
     }
-
-
 
     private fun drawCenterText(canvas: Canvas, paint: Paint, text: String) {
         paint.textAlign = Paint.Align.LEFT

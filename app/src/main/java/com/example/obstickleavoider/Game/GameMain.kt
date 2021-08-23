@@ -37,12 +37,11 @@ class GameMain : AppCompatActivity() {
 
             }
         }.start()
+
         Thread(){
-           run {
-               this.finish()
-
+            runOnUiThread(){
+                finish()
             }
-        }.start()
-
+        }
     }
 }
